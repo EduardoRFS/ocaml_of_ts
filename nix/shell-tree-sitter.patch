@@ -1,0 +1,10 @@
+diff --git a/scripts/configure-tree-sitter b/scripts/configure-tree-sitter
+index 6eedcd7..dcdaed3 100755
+--- a/scripts/configure-tree-sitter
++++ b/scripts/configure-tree-sitter
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env bash
++#! /bin/sh
+ #
+ # Determine locations of the tree-sitter C library and headers.
+ #
