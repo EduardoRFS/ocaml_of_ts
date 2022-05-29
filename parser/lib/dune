@@ -1,0 +1,26 @@
+(rule
+ (targets c_flags.sexp c_library_flags.sexp)
+ (action
+  (run ./config/discover.exe)))
+
+(library
+ (public_name tree-sitter-typescript)
+ (name tree_sitter_typescript)
+ (preprocess
+  (pps ppx_sexp_conv))
+ (libraries atdgen-runtime tree-sitter.run)
+ (foreign_stubs
+  (language c)
+  (names scanner parser bindings)
+  (flags -std=c99 -fPIC -I .))
+ (c_library_flags
+  ((:include c_library_flags.sexp)
+   -lstdc++))
+ (foreign_stubs
+  (language cxx)
+  (names)
+  (flags
+   -fPIC
+   -I
+   .
+   (:include c_flags.sexp))))

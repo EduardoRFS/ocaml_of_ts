@@ -1,0 +1,5 @@
+(executable
+ (package tree-sitter-typescript)
+ (public_name parse-typescript)
+ (name Main)
+ (libraries tree-sitter-typescript))
